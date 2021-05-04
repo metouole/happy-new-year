@@ -1,10 +1,13 @@
-<img src="{{ asset('images/flag.png') }}" alt="azalearn logo">
 
-<h1>Built with &hearts; by <a href="www.azalearn.com" target="_blank">azalearn</a> </h1>
+{% extends 'layouts/base.html.twig' %}
 
-<p>Go back to <a href="{{ path('app_home') }}">home page</a></p>
 
-<footer>
-	<p>&copy; Copyright 2021</p>
+{% block body %}
+	<img src="{{ asset('images/flag.png') }}" alt="azalearn logo">
+
+	<h1>Built with &hearts; by <a href="www.azalearn.com" target="_blank">azalearn</a> </h1>
+
+	<p>Go back to <a href="{{ path('app_home') }}">home page</a></p>
+
 	
-</footer>
+{% endblock %}
