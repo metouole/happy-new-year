@@ -2,9 +2,14 @@
 
 {% block body %}
 
-	<h1>Oups, not a new year :(</h1>
-	<p>Today is May 4, 2021 and there is 241 days left until next year.</p>
+	{% if isNewYear %}
+		<h1>Happy New Year 2021!</h1>
+		<p>We wish you all the best to you and your family</p>
 
+	{% else %}
+		<h1>Oups, not a new year :(</h1>
+		<p>Today is May 4, 2021 and there is 241 days left until next year.</p>
+	{% endif %}
 	
 
 {% endblock %}
