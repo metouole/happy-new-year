@@ -8,7 +8,7 @@
 
 	{% else %}
 		<h1>Oups, not a new year :(</h1>
-		<p>Today is May 4, 2021 and there is 241 days left until next year.</p>
+		<p>Today is <strong>{{ 'now'|date('F j, Y')}} </strong>and there is <strong>{{daysLeftUntilNextYear}}</strong> days left until next year.</p>
 	{% endif %}
 	
 
