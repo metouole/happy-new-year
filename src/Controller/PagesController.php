@@ -11,15 +11,15 @@ use App\Service\CalendarService;
 class PagesController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
-    public function home(): Response
+    public function home(CalendarService $calendar): Response
     {
        
         //$isNewYear = $currentTime->format('d') == '01' and $currentTime->format('m') == '01';
-        $CalendarService = new CalendarService();
+        //$CalendarService = new CalendarService();
 
         return $this->render('pages/home.html.twig', [
-            'isNewYear' =>$CalendarService->isNewYear(),
-            'daysLeftUntilNextYear' => $CalendarService->daysLeftUntilNextYear()
+            'isNewYear' =>$calendar->isNewYear(),
+            'daysLeftUntilNextYear' => $calendar->daysLeftUntilNextYear()
 
                     ]);
     }

@@ -8,6 +8,10 @@ use DateTimeImmutable;
 class CalendarService
 {
 
+	public function __construct(private string $timezone)
+	{
+		
+	}
 
 	public function isNewYear(): bool
 	{
